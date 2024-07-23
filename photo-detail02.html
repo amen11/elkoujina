@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+   
 </head>
 
 <body>
+
+  
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -41,7 +43,16 @@
             </div>
         </div>
     </nav>
-
+    <div class="container-fluid video-container tm-mt-60">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+                src="https://www.youtube.com/embed/MsMpstvT5Oc"
+                title="Salade 🥗 #shorts #shortsvideo #shortsfeed #shortsfood #shortsfoodvideo #shortsfoodies"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="container">
             <div class="row">
@@ -49,15 +60,15 @@
                     <div class="header row">
                         <div class="col-md-4">
                             <h6>Client</h6>
-                            <p>Elkoujina.tv</p>
+                            <p class="description">Elkoujina.tv</p>
                         </div>
                         <div class="col-md-4">
                             <h6>Production</h6>
-                            <p>nextstrategie studio</p>
+                            <p class="description">nextstrategie studio</p>
                         </div>
                         <div class="col-md-4">
                             <h6>Agence</h6>
-                            <p> elkoujina brand factory</p>
+                            <p class="description"> elkoujina brand factory</p>
                         </div>
                     </div>
 
@@ -65,8 +76,8 @@
                         <h2>LE MEILLEUR PÂTISSIER<br><small>(ADAPTATION DE “THE GREAT BRITISH BAKE OFF”)</small></h2>
                     </div>
 
-                    <div class="description">
-                        <p>
+                    <div >
+                        <p class="description">
                             Des pâtissiers amateurs s’affrontent autour d’épreuves de pâtisserie. Chaque émission se
                             compose d’une série d’épreuves à réaliser dans un temps imparti : l’épreuve signature,
                             l’épreuve technique, l’épreuve créative et l’épreuve de la carte blanche (épreuve de
@@ -75,61 +86,44 @@
                             l’épreuve créative ». Chaque semaine, un pâtissier est éliminé, jusqu’à qu’il n’en reste
                             qu’un, distingué ainsi comme «Le Meilleur Pâtissier». Il gagne ainsi la publication de son
                             propre livre de recettes.
-
-
                         </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="embed-responsive embed-responsive-9by16">
-                            <iframe width="400" height="600" class="embed-responsive-item"
-                                src="https://www.youtube.com/embed/MsMpstvT5Oc"
-                                title="Salade 🥗 #shorts #shortsvideo #shortsfeed #shortsfood #shortsfoodvideo #shortsfoodies"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <footer class="tm-bg-gray pt-5 mt-64  tm-text-gray tm-footer">
-            <div class="container-fluid tm-container-small">
-                <div class="row">
-                    <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <ul class="tm-social-links d-flex justify-content-start pl-0 mb-0">
-                                    <li class="mb-2"><a href="https://instagram.com"><i
-                                                class="fab fa-instagram"></i></a></li>
-                                    <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-                                    </li>
-                                    <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li class="mb-2"><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <span class="tm-text-gray">El Koujina</span>
-                            </div>
+    
+    <footer class="tm-bg-gray pt-5 mt-64 tm-text-gray tm-footer">
+        <div class="container-fluid tm-container-small">
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <ul class="tm-social-links d-flex justify-content-start pl-0 mb-0">
+                                <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                                <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                                <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                                <li class="mb-2"><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="tm-text-white">El Koujina</span>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
-                        <span class="tm-text-gray">All rights reserved</span>
-                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                    <span class="tm-text-white">All rights reserved</span>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="js/plugins.js"></script>
-        <script>
-            $(window).on("load", function () {
-                $('body').addClass('loaded');
-            });
-        </script>
+    <script src="js/plugins.js"></script>
+    <script>
+        $(window).on("load", function () {
+            $('body').addClass('loaded');
+        });
+    </script>
 </body>
 
 </html>
