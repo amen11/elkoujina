@@ -64,6 +64,7 @@ a:hover {
 .navbar-brand {
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
 .navbar-brand img {
@@ -92,7 +93,7 @@ a:hover {
 }
 
 .tm-hero {
-    min-height: 200px;
+    min-height: 50px;
     background: transparent;
 }
 
@@ -378,17 +379,16 @@ figure.effect-ming h2 {
 
 figure.effect-ming:hover figcaption::before,
 figure.effect-ming:hover h2 {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    opacity: 4;
+   
 }
 
 figure.effect-ming:hover figcaption {
-    background-color: rgba(58, 52, 42, 0);
+    background-color: rgba(35, 34, 34, 0);
 }
 
 figure.effect-ming:hover img {
-    opacity: 0.4;
+    opacity: 0.2;
 }
 
 .tm-footer {
@@ -850,4 +850,8 @@ h1 {
     .tm-paging-link i {
         font-size: 0.8rem;
     }
+}
+
+#menu {
+    margin-right: 20px;
 }
