@@ -24,7 +24,7 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #009999;
+    background-color: #000000;
     border: 0;
     border-radius: 5px;
     padding: 12px 50px 14px;
@@ -33,7 +33,7 @@ a:hover {
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: #000000;
+    background-color: #999;
 }
 
 .btn-primary.disabled,
@@ -62,9 +62,20 @@ a:hover {
 }
 
 .navbar-brand {
-    color: #000000;
-    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
 }
+
+.navbar-brand img {
+    display: inline-block;
+    margin-right: 10px;
+    height: 60px;
+}
+
+.navbar-brand img:last-child {
+    margin-right: 0;
+}
+
 
 .logo-container {
     padding: 10px;
@@ -72,11 +83,8 @@ a:hover {
 
 .logo-image {
     max-width: 100px;
-    /* Set the maximum width of the logo */
     height: auto;
-    /* Maintain the aspect ratio */
     margin: 0 auto;
-    /* Center the logo horizontally */
 }
 
 .navbar-brand i {
@@ -183,12 +191,40 @@ p,
     cursor: pointer;
 }
 
+
+.container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tm-gallery .col-xl-4,
+.tm-gallery .col-lg-4,
+.tm-gallery .col-md-4,
+.tm-gallery .col-sm-6,
+.tm-gallery .col-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+}
+
+
+.tm-gallery figure {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
 .tm-video-item img {
-    position: relative;
     display: block;
-    min-height: 100%;
-    max-width: 100%;
-    opacity: 0.8;
+    width: 100%;
+    height: auto;
+}
+
+
+.tm-container-content {
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .carousel-image {
@@ -355,22 +391,47 @@ figure.effect-ming:hover img {
     opacity: 0.4;
 }
 
-.tm-footer-links li {
+.tm-footer {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tm-footer-links,
+.tm-social-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.tm-footer-links li,
+.tm-social-links li {
     list-style: none;
     margin-bottom: 5px;
 }
 
 .tm-footer-links li a {
     color: #999999;
+    text-decoration: none; 
 }
 
 .tm-footer-links li a:hover {
-    color: #999999;
+    color: #ffffff;
+}
+
+.tm-social-links {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
 }
 
 .tm-social-links li {
     list-style: none;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .tm-social-links li:last-child {
@@ -381,15 +442,15 @@ figure.effect-ming:hover img {
     width: 44px;
     height: 44px;
     display: flex;
-    background-color: #000000;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    background-color: #000000;
+    color: #999999;
+    text-decoration: none;
 }
 
 .tm-social-links li a:hover {
-    color: #fff;
-    background-color: #000000;
-    border-radius: 50%;
+    color: gray;
 }
 
 .tm-bg-black {
@@ -400,9 +461,7 @@ figure.effect-ming:hover img {
     color: white;
 }
 
-.tm-footer {
-    background-color: black;
-}
+
 
 
 /* Videos */
@@ -471,48 +530,23 @@ figure.effect-ming:hover img {
 }
 
 .tm-social-links a .fa-instagram {
-    color: #C13584; /* Instagram color */
+    color: #ffffff; /* Instagram color */
 }
 
 .tm-social-links a .fa-facebook {
-    color: #1877F2; /* Facebook color */
+    color: #ffffff; /* Facebook color */
 }
 
 .tm-social-links a .fa-twitter {
-    color: #1DA1F2; /* Twitter color */
+    color: #ffffff; /* Twitter color */
 }
 
 .tm-social-links a .fa-linkedin {
-    color: #0077B5; /* LinkedIn color */
-}
-
-.tm-social-links a:hover .fa-instagram,
-.tm-social-links a:hover .fa-facebook,
-.tm-social-links a:hover .fa-twitter,
-.tm-social-links a:hover .fa-linkedin {
-    color: white; /* Change color to white on hover */
+    color: #ffffff; /* LinkedIn color */
 }
 
 
 /* Contact */
-select.form-control {
-    border-radius: 0;
-}
-
-select.form-control option {
-    height: 30px;
-}
-
-select:not([multiple]) {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-position: right 15px center;
-    background-repeat: no-repeat;
-    background-image: url(../img/select-arrow.png);
-    padding: 14px 20px;
-    padding-right: 20px;
-    color: #666;
-}
 
 .mapouter {
     position: relative;
@@ -594,15 +628,52 @@ select:not([multiple]) {
 .form-control,
 input:-internal-autofill-selected,
 select:not([multiple]) {
-    color: #009999 !important;
+    color: #000000 !important;
 }
 
 .form-control::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #009999;
+    color: #666666;
     opacity: 1;
     /* Firefox */
 }
+
+.tm-social a {
+    color: black;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.form-label .required {
+    color: #999;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.team-member {
+    text-align: center;
+}
+.team-member h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.team-member p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0;
+}
+
+/* Actualities */
 
 .actualites-container {
     display: flex;
