@@ -1,3 +1,9 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 p {
     line-height: 1.8;
 }
@@ -395,6 +401,7 @@ figure.effect-ming:hover img {
     background-color: black;
     color: white;
     padding: 20px 0;
+    margin-top: auto;
 }
 
 .social-icons a {
