@@ -618,6 +618,32 @@ figure.effect-ming:hover img {
     }
 }
 
+/* Ensure all text within .contact-info is black */
+.contact-info {
+    color: black; /* Set default text color to black */
+}
+
+.contact-info h2,
+.contact-info p,
+.contact-info address,
+.contact-info a {
+    color: black; /* Override any specific color settings */
+}
+
+.contact-info a {
+    color: black; /* Ensure links are also black */
+}
+
+.contact-info a:hover {
+    color: #333; /* Optional: Darker color for links on hover */
+}
+
+.contact-info i {
+    color: black; /* Set icon color to black */
+}
+
+/* Optional: Customize background if needed */
+
 
 
 
