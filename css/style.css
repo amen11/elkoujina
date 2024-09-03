@@ -234,19 +234,6 @@ p,
     padding-right: 30px;
 }
 
-.carousel-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: black;
-    border-radius: 50%;
-    padding: 10px;
-}
 
 .description {
     color: black;
@@ -374,7 +361,7 @@ figure.effect-ming figcaption::before {
     transform: scale3d(1.4, 1.4, 1);
 }
 
-figure.effect-ming h2 {
+figure.effect-ming h3 {
     font-size: 1.3em;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -384,7 +371,7 @@ figure.effect-ming h2 {
 }
 
 figure.effect-ming:hover figcaption::before,
-figure.effect-ming:hover h2 {
+figure.effect-ming:hover h3 {
     opacity: 4;
    
 }
@@ -559,19 +546,80 @@ figure.effect-ming:hover img {
     width: 100%;
 }
 
-#carouselExampleIndicators {
-    max-width: 80%;
-    /* Adjust to your desired width */
-    margin: auto;
-    /* Centers the carousel */
+/* Base styles for the carousel */
+.carousel-inner {
+    width: 100%;
+    overflow: hidden; /* Hide overflow to maintain proper image scaling */
 }
 
-.carousel-inner img {
-    max-height: 400px;
-    /* Adjust to your desired height */
-    object-fit: cover;
-    /* Ensures the image covers the container without distortion */
+.carousel-item {
+    width: 100%;
+    height: auto;
 }
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for zoom effects */
+    display: block; /* Remove any extra space below the image */
+}
+
+
+/* Responsive adjustments for web and mobile */
+@media (min-width: 769px) {
+    /* Styles for web version */
+    .carousel-inner {
+        max-width: 320px; /* Limit the maximum width of the carousel */
+        margin: 0 auto; /* Center the carousel horizontally */
+    }
+
+    .carousel-item img {
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Styles for tablets and mobile devices */
+    .carousel-inner {
+        padding: 0 10px; /* Add some padding for better spacing */
+    }
+
+    .carousel-item img {
+        object-fit: contain; /* Ensure the whole image is visible on smaller screens */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carousel-indicators {
+        bottom: 10px; /* Adjust the position of indicators */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for very small screens */
+    .carousel-indicators {
+        display: none; /* Hide indicators on very small screens for a cleaner look */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%; /* Increase the touchable area for controls */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+
 
 
 .tm-contact-form {
@@ -657,18 +705,33 @@ h1 {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .team-member {
     text-align: center;
 }
 .team-member h2 {
     font-size: 18px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 .team-member p {
     font-size: 14px;
     color: #666;
     margin-top: 0;
 }
+
+@media (max-width: 768px) {
+    .team-member {
+        text-align: left;
+    }
+}
+
 
 /* Actualities */
 
@@ -701,30 +764,47 @@ h1 {
 
 /* A propos */
 
+/* Base styles */
 .content-wrapper {
     display: flex;
-    width: 100%;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+    padding: 20px;
 }
-.left-side {
-    flex: 1;
+
+.left-side, .right-side {
+    width: 48%;
 }
-.right-side {
-    flex: 2;
-    max-width: 600px;
-}
+
 .heading-primary {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-.text-paragraph {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 2em;
     margin-bottom: 20px;
-    color: #FFFFFF;
+}
+
+.text-paragraph {
+    margin-bottom: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+    }
+
+    .heading-primary {
+        text-align: center;
+    }
+
+    .text-paragraph {
+        text-align: left;
+        color: black;
+
+    }
 }
 
 @media (max-width: 1199px) {
